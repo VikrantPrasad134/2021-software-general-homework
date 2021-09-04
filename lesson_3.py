@@ -5,15 +5,44 @@
 # set the variable x to the length of in_list - but you may NOT use len! 
 # Try to mimic the behavior of len.
 
-
-
-
+in_list = [ 5, 2, 3, 1, 4, 6, 8, 7 ]
+x = 0
+for i in in_list:
+    x += 1
+print(str(x))
 ################################################
 # Create a program to accept words from a user, and add them to a dictionary. 
 # At the end, use print(mydict) to print out the user's work to them
 
 
+mydict = {}
+while True:
+    print("Please enter a word. If you would like to stop hit enter")
+    word = input() 
+    if word == "":
+        break
+    print("Please enter the corresponding value.")
+    value = input()
+    if len(word.split()) > 1:
+        print("The key cannot contain a space.")
+    elif word in mydict:
+        print("This key is already in the dictionary.")
+    else:
+        mydict[word] = value
 
+print(mydict)
+
+print("Please enter a sentence: ")
+sentence = input()
+sentenceSplit = sentence.split()
+print(sentenceSplit)
+timesRan = -1
+for item in sentenceSplit:
+    timesRan += 1
+    if item in mydict:
+        sentenceSplit[timesRan] = mydict[item]
+
+print(" ".join(sentenceSplit))
 
 ################################################
 # Extend your dictionary program from assignment #2 to have some added capabilities:
