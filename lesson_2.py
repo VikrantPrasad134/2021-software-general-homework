@@ -21,13 +21,13 @@ print("The average score of the student's 3 tests is " + str(average))
 if average >= 90:
     print("This students scores average out to an A.")
 elif average >= 80:
-    print("This students scores average out to an B.")
+    print("This students scores average out to a B.")
 elif average >= 70:
-    print("This students scores average out to an C.")
+    print("This students scores average out to a C.")
 elif average >= 60:
-    print("This students scores average out to an D.")
+    print("This students scores average out to a D.")
 else:
-    print("This students scores average out to an F.")
+    print("This students scores average out to a F.")
 
 #########################################################
 
