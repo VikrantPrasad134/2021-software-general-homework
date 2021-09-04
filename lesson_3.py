@@ -18,7 +18,7 @@ print(str(x))
 mydict = {}
 while True:
     print("Please enter a word. If you would like to stop hit enter")
-    word = input() 
+    word = input()
     if word == "":
         break
     print("Please enter the corresponding value.")
@@ -35,12 +35,11 @@ print(mydict)
 print("Please enter a sentence: ")
 sentence = input()
 sentenceSplit = sentence.split()
-print(sentenceSplit)
-timesRan = -1
+timesRan = 0
 for item in sentenceSplit:
-    timesRan += 1
     if item in mydict:
         sentenceSplit[timesRan] = mydict[item]
+    timesRan += 1
 
 print(" ".join(sentenceSplit))
 
